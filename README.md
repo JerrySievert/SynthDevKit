@@ -30,3 +30,12 @@ tests in `spec` mode.
 $ make test
 $ ./testrunner -s
 ```
+
+### Documentation
+
+These modules live in the `SynthDevKit` namespace.
+
+Documentation is available for the [CV](docs/CV.md) and [Clock](docs/Clock.md)
+modules.
+
+There are currently no examples, but you can see them in use in [SynthKit](https://github.com/JerrySievert/SynthKit/).
