@@ -59,6 +59,10 @@ namespace SynthDevKit {
     ready = false;
     step = 0;
 
+    for (uint16_t i = 0; i < CLOCK_LIMIT; i++) {
+      states[i] = false;
+    }
+
     cv->reset();
   }
 }
