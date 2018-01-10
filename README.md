@@ -7,13 +7,13 @@ to be a dependency, not a stand-alone project.
 
 ## Building and Testing
 
-CVKit lives on [GitHub](https://github.com/JerrySievert/SynthDevKit).
+SynthDevKit lives on [GitHub](https://github.com/JerrySievert/SynthDevKit).
 
 ### Building
 
 ```
 $ git clone https://github.com/JerrySievert/SynthDevKit.git
-$ cd CVKit
+$ cd SynthDevKit
 $ make
 ```
 
