@@ -58,5 +58,7 @@ namespace SynthDevKit {
     current = 0;
     ready = false;
     step = 0;
+
+    cv->reset();
   }
 }
