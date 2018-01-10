@@ -40,6 +40,9 @@ int main (int argc, char **argv) {
   test(test_trigger_update, "test trigger update");
   test(test_trigger_reset, "test trigger reset");
 
+  test(test_clock_exception, "test clock exception");
+  test(test_clock_update, "test clock update");
+
   cout << endl << "PASSED: " << test_passed << endl << "FAILED: " << test_failed << endl;
 
   return (test_failed > 0 ? 1 : 0);

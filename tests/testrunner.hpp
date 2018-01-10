@@ -21,3 +21,5 @@ void _test_start (const char *);
 
 uint8_t test_trigger_update ( );
 uint8_t test_trigger_reset ( );
+uint8_t test_clock_exception ( );
+uint8_t test_clock_update ( );
