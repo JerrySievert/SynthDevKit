@@ -47,7 +47,7 @@ namespace SynthDevKit {
       }
     }
 
-    if (step > triggerCount) {
+    if (step >= triggerCount) {
       step = 0;
     }
 
