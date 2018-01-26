@@ -20,7 +20,7 @@ uint8_t test_primeclock_exception ( ) {
 }
 
 uint8_t test_primeclock_primes ( ) {
-  PrimeClock *clock = new PrimeClock(4, 1.5);
+  PrimeClock *clock = new PrimeClock(8, 1.5);
   std::vector<uint16_t>::iterator it;
   uint16_t total;
   for (it = clock->primes.begin(), total = 0; it != clock->primes.end(); it++, total++) {
@@ -32,10 +32,18 @@ uint8_t test_primeclock_primes ( ) {
       check(*it == 5, "third prime is correct");
     } else if (total == 3) {
       check(*it == 7, "fourth prime is correct");
+    } else if (total == 4) {
+      check(*it == 11, "fifth prime is correct");
+    } else if (total == 5) {
+      check(*it == 13, "sixth prime is correct");
+    } else if (total == 6) {
+      check(*it == 17, "seventh prime is correct");
+    } else if (total == 7) {
+      check(*it == 19, "eighth prime is correct");
     }
   }
 
-  check(total == 4, "the count is correct");
+  check(total == 16, "the count is correct");
 
   done();
 }

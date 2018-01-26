@@ -4,8 +4,12 @@
 namespace SynthDevKit {
   PrimeClock::PrimeClock (uint16_t count, float threshold) : Clock(count, threshold){
 
-    // generate the prime numbers for up to CLOCK_LIMIT
-    generatePrimes(count);
+    if (count > PRIME_LIMIT) {
+      throw CLK_ERROR_TOO_MANY;
+    }
+
+    // generate the prime numbers for up to PRIME_LIMIT
+    generatePrimes();
   }
 
   bool *PrimeClock::update (float input) {
@@ -43,22 +47,23 @@ namespace SynthDevKit {
     return states;
   }
 
-  void PrimeClock::generatePrimes (uint16_t count) {
+  void PrimeClock::generatePrimes ( ) {
     primes.push_back(2);
     primes.push_back(3);
-    for (uint16_t i = 3; i < CLOCK_LIMIT && primes.size() < count; i++) {
-      bool prime = true;
-
-      for (uint16_t j = 0; j < primes.size() && primes[j] * primes[j] <= i; j++) {
-        if (i % primes[j] == 0) {
-          prime = false;
-          break;
-        }
-
-        if (prime) {
-          primes.push_back(i);
-        }
-      }
-    }
+    primes.push_back(5);
+    primes.push_back(7);
+    primes.push_back(11);
+    primes.push_back(13);
+    primes.push_back(17);
+    primes.push_back(19);
+    primes.push_back(23);
+    primes.push_back(29);
+    primes.push_back(31);
+    primes.push_back(37);
+    primes.push_back(41);
+    primes.push_back(43);
+    primes.push_back(47);
+    primes.push_back(53);
   }
+
 }

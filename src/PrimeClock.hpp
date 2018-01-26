@@ -5,6 +5,8 @@
 
 #include "Clock.hpp"
 
+#define PRIME_LIMIT 16
+
 namespace SynthDevKit {
   class PrimeClock : Clock {
     public:
@@ -12,6 +14,6 @@ namespace SynthDevKit {
       bool *update (float);
       std::vector<uint16_t> primes;
     private:
-      void generatePrimes (uint16_t);
+      void generatePrimes ( );
   };
 }
