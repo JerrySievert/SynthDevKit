@@ -24,3 +24,7 @@ uint8_t test_trigger_reset ( );
 uint8_t test_clock_exception ( );
 uint8_t test_clock_update ( );
 uint8_t test_clock_reset ( );
+
+uint8_t test_primeclock_exception ( );
+uint8_t test_primeclock_primes ( );
+uint8_t test_primeclock_update ( );

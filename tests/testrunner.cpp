@@ -43,6 +43,10 @@ int main (int argc, char **argv) {
   test(test_clock_exception, "test clock exception");
   test(test_clock_update, "test clock update");
 
+  test(test_primeclock_exception, "test primeclock exception");
+  test(test_primeclock_primes, "test primeclock primes");
+  test(test_primeclock_update, "test primeclock update");
+
   cout << endl << "PASSED: " << test_passed << endl << "FAILED: " << test_failed << endl;
 
   return (test_failed > 0 ? 1 : 0);

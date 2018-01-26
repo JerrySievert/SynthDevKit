@@ -14,7 +14,7 @@ namespace SynthDevKit {
       Clock (uint16_t, float);
       bool *update (float);
       void reset ( );
-    private:
+    protected:
       CV *cv;
       uint16_t triggerCount;
       bool ready;
