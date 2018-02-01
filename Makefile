@@ -1,8 +1,8 @@
 CXX=g++
 RM=rm -f
 CD=cd
-CPPFLAGS=-Wall -g
-LDFLAGS=-g
+CPPFLAGS=-Wall -std=c++11 -O3
+LDFLAGS=
 
 
 SRCS=$(wildcard src/*.cpp)
