@@ -28,3 +28,8 @@ uint8_t test_clock_reset ( );
 uint8_t test_primeclock_exception ( );
 uint8_t test_primeclock_primes ( );
 uint8_t test_primeclock_update ( );
+
+uint8_t test_bjorklund_exception ( );
+uint8_t test_bjorklund_update_exception ( );
+uint8_t test_bjorklund_update ( );
+uint8_t test_bjorklund_reset ( );

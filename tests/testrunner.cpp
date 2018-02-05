@@ -47,6 +47,11 @@ int main (int argc, char **argv) {
   test(test_primeclock_primes, "test primeclock primes");
   test(test_primeclock_update, "test primeclock update");
 
+  test(test_bjorklund_exception, "test bjorklund exception");
+  test(test_bjorklund_update_exception, "test bjorklund update exception");
+  test(test_bjorklund_update, "test bjorklund update");
+  test(test_bjorklund_reset, "test bjorklund reset");
+
   cout << endl << "PASSED: " << test_passed << endl << "FAILED: " << test_failed << endl;
 
   return (test_failed > 0 ? 1 : 0);
