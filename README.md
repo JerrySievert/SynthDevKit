@@ -5,6 +5,9 @@ SynthDevKit is a set of utilities for development of software and hardware synth
 All effort is made to test correctness and functionality.  SynthDevKit is meant
 to be a dependency, not a stand-alone project.
 
+[![Build Status](https://travis-ci.org/JerrySievert/SynthDevKit.svg?branch=master)](https://travis-ci.org/JerrySievert/SynthDevKit)
+[![Coverage Status](https://coveralls.io/repos/github/JerrySievert/SynthDevKit/badge.svg?branch=master)](https://coveralls.io/github/JerrySievert/SynthDevKit?branch=master)
+
 ## Building and Testing
 
 SynthDevKit lives on [GitHub](https://github.com/JerrySievert/SynthDevKit).
