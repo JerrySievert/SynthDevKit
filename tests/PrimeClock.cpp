@@ -13,7 +13,7 @@ uint8_t test_primeclock_exception ( ) {
     has_exception = true;
   }
 
-  check(clock == NULL, "clock is null");
+  check(!clock, "clock is null");
   check(has_exception, "exception is thrown");
 
   done();
