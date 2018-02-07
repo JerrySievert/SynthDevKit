@@ -5,7 +5,7 @@ using namespace SynthDevKit;
 
 uint8_t test_primeclock_exception ( ) {
   bool has_exception = 0;
-  PrimeClock *clock;
+  PrimeClock *clock = {0};
 
   try {
     clock = new PrimeClock(CLOCK_LIMIT + 1, 1.5);
@@ -13,7 +13,7 @@ uint8_t test_primeclock_exception ( ) {
     has_exception = true;
   }
 
-  check(clock, "clock is not null");
+  check(clock == NULL, "clock is null");
   check(has_exception, "exception is thrown");
 
   done();
