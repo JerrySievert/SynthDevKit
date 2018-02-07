@@ -15,6 +15,7 @@ namespace SynthDevKit {
   }
 
   void Bjorklund::reset ( ) {
+    _step = 0;
     currentStep = 0;
   }
 
@@ -44,14 +45,17 @@ namespace SynthDevKit {
     _divisor = numSlots - numSteps;
     _remainders[0] = numSteps;
     _level = 0;
+
     do {
       _count[_level] = _divisor / _remainders[_level];
       _remainders[_level + 1] = _divisor % _remainders[_level];
       _divisor = _remainders[_level];
       _level++;
     } while (_remainders[_level] > 1);
+
     _count[_level] = _divisor;
     buildString (_level);
+
   }
 
   void Bjorklund::update (uint8_t steps, uint8_t slots) {
@@ -59,12 +63,8 @@ namespace SynthDevKit {
       throw BJORK_ERROR_TOO_MANY;
     }
 
-    if (slots != numSlots) {
+    if (slots != numSlots || steps != numSteps) {
       numSlots = slots;
-      numSteps = steps;
-      reset();
-      computeResults();
-    } else if (numSteps != steps) {
       numSteps = steps;
       reset();
       computeResults();
