@@ -5,7 +5,7 @@ using namespace SynthDevKit;
 
 uint8_t test_bjorklund_exception ( ) {
   bool has_exception = 0;
-  Bjorklund *b;
+  Bjorklund *b = {0};
 
   try {
     b = new Bjorklund(MAX_SLOTS + 1);
@@ -13,7 +13,7 @@ uint8_t test_bjorklund_exception ( ) {
     has_exception = true;
   }
 
-  check(b, "clock is not null");
+  check(!b, "clock is null");
   check(has_exception, "exception is thrown");
 
   done();

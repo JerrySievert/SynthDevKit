@@ -5,7 +5,7 @@ using namespace SynthDevKit;
 
 uint8_t test_clock_exception ( ) {
   bool has_exception = 0;
-  Clock *clock;
+  Clock *clock = {0};
 
   try {
     clock = new Clock(CLOCK_LIMIT + 1, 1.5);
@@ -13,7 +13,7 @@ uint8_t test_clock_exception ( ) {
     has_exception = true;
   }
 
-  check(clock, "clock is not null");
+  check(!clock, "clock is null");
   check(has_exception, "exception is thrown");
 
   done();
@@ -131,6 +131,6 @@ uint8_t test_clock_reset ( ) {
   for (uint16_t i = 0; i < 4; i++) {
     check(results[i] == false, "not triggered on first trigger");
   }
-  
+
   done();
 }
