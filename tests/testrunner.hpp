@@ -33,3 +33,6 @@ uint8_t test_bjorklund_exception ( );
 uint8_t test_bjorklund_update_exception ( );
 uint8_t test_bjorklund_update ( );
 uint8_t test_bjorklund_reset ( );
+
+uint8_t test_distributedclock_master ( );
+uint8_t test_distributedclock_servant ( );

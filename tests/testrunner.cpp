@@ -52,6 +52,9 @@ int main (int argc, char **argv) {
   test(test_bjorklund_update, "test bjorklund update");
   test(test_bjorklund_reset, "test bjorklund reset");
 
+  test(test_distributedclock_master, "test distributed clock master");
+  test(test_distributedclock_servant, "test distributed clock servant");
+
   cout << endl << "PASSED: " << test_passed << endl << "FAILED: " << test_failed << endl;
 
   return (test_failed > 0 ? 1 : 0);
