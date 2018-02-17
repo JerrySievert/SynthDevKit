@@ -36,3 +36,7 @@ uint8_t test_bjorklund_reset ( );
 
 uint8_t test_distributedclock_master ( );
 uint8_t test_distributedclock_servant ( );
+
+uint8_t test_fibonacciclock_exception ( );
+uint8_t test_fibonacciclock_fibonaccis ( );
+uint8_t test_fibonacciclock_update ( );

@@ -55,6 +55,10 @@ int main (int argc, char **argv) {
   test(test_distributedclock_master, "test distributed clock master");
   test(test_distributedclock_servant, "test distributed clock servant");
 
+  test(test_fibonacciclock_exception, "test fibonacciclock exception");
+  test(test_fibonacciclock_fibonaccis, "test fibonacciclock fibonaccis");
+  test(test_fibonacciclock_update, "test fibonacciclock update");
+
   cout << endl << "PASSED: " << test_passed << endl << "FAILED: " << test_failed << endl;
 
   return (test_failed > 0 ? 1 : 0);
