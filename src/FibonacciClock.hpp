@@ -8,7 +8,7 @@
 #define FIBONACCI_LIMIT 8
 
 namespace SynthDevKit {
-  class FibonacciClock : Clock {
+  class FibonacciClock : public Clock {
     public:
       FibonacciClock (uint16_t, float);
       bool *update (float);
