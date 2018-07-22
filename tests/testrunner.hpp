@@ -40,3 +40,12 @@ uint8_t test_distributedclock_servant ( );
 uint8_t test_fibonacciclock_exception ( );
 uint8_t test_fibonacciclock_fibonaccis ( );
 uint8_t test_fibonacciclock_update ( );
+
+uint8_t test_event_emitter ( );
+uint8_t test_event_emitter_on ( );
+uint8_t test_event_emitter_clear ( );
+uint8_t test_event_emitter_listener ( );
+
+uint8_t test_cv_event ( );
+uint8_t test_cv_event_update ( );
+uint8_t test_cv_event_resets ( );

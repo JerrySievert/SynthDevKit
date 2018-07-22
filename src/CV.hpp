@@ -14,13 +14,14 @@ namespace SynthDevKit {
       uint32_t triggerTotal ( );
       bool isHigh ( );
       bool isLow ( );
-    private:
-      float threshold;
+    protected:
       bool triggered;
       bool lastTriggered;
+      uint32_t triggerCount;
+    private:
+      float threshold;
       float lastValue;
       uint32_t triggerIntervalCount;
       uint32_t lastTriggerInterval;
-      uint32_t triggerCount;
   };
 }

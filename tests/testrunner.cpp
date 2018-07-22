@@ -37,27 +37,36 @@ int main (int argc, char **argv) {
     }
   }
 
-  test(test_trigger_update, "test trigger update");
-  test(test_trigger_reset, "test trigger reset");
+  test(test_trigger_update, "trigger update");
+  test(test_trigger_reset, "trigger reset");
 
-  test(test_clock_exception, "test clock exception");
-  test(test_clock_update, "test clock update");
+  test(test_clock_exception, "clock exception");
+  test(test_clock_update, "clock update");
 
-  test(test_primeclock_exception, "test primeclock exception");
-  test(test_primeclock_primes, "test primeclock primes");
-  test(test_primeclock_update, "test primeclock update");
+  test(test_primeclock_exception, "primeclock exception");
+  test(test_primeclock_primes, "primeclock primes");
+  test(test_primeclock_update, "primeclock update");
 
-  test(test_bjorklund_exception, "test bjorklund exception");
-  test(test_bjorklund_update_exception, "test bjorklund update exception");
-  test(test_bjorklund_update, "test bjorklund update");
-  test(test_bjorklund_reset, "test bjorklund reset");
+  test(test_bjorklund_exception, "bjorklund exception");
+  test(test_bjorklund_update_exception, "bjorklund update exception");
+  test(test_bjorklund_update, "bjorklund update");
+  test(test_bjorklund_reset, "bjorklund reset");
 
-  test(test_distributedclock_master, "test distributed clock master");
-  test(test_distributedclock_servant, "test distributed clock servant");
+  test(test_distributedclock_master, "distributed clock master");
+  test(test_distributedclock_servant, "distributed clock servant");
 
-  test(test_fibonacciclock_exception, "test fibonacciclock exception");
-  test(test_fibonacciclock_fibonaccis, "test fibonacciclock fibonaccis");
-  test(test_fibonacciclock_update, "test fibonacciclock update");
+  test(test_fibonacciclock_exception, "fibonacciclock exception");
+  test(test_fibonacciclock_fibonaccis, "fibonacciclock fibonaccis");
+  test(test_fibonacciclock_update, "fibonacciclock update");
+
+  test(test_event_emitter, "event emitter");
+  test(test_event_emitter_on, "event emitter on");
+  test(test_event_emitter_clear, "event emitter clear");
+  test(test_event_emitter_listener, "event emitter listeners");
+
+  test(test_cv_event, "cv event");
+  test(test_cv_event_update, "cv event update");
+  test(test_cv_event_resets, "cv event resets");
 
   cout << endl << "PASSED: " << test_passed << endl << "FAILED: " << test_failed << endl;
 
