@@ -45,7 +45,7 @@ namespace SynthDevKit {
 
     if (mantissa == 0) {
       if (characteristic <= 0) {
-        return ctx->sample->values[(uint64_t) ctx->sample->length - 1]
+        return ctx->sample->values[(uint64_t) ctx->sample->length - 1];
       } else {
         return ctx->sample->values[(uint64_t) characteristic - 1];
       }
