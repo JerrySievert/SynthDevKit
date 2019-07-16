@@ -10,7 +10,7 @@ namespace SynthDevKit {
 
 struct Sample {
   Sample(uint64_t _length, std::string _name, float *_values, float _pitch,
-         uint32_t _sampleRate = 44100, _loop = false)
+         uint32_t _sampleRate = 44100, bool _loop = false)
       : length(_length), name(_name), values(_values), pitch(_pitch),
         sampleRate(_sampleRate), loop(_loop) {}
   uint64_t length;
